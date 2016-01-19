@@ -1,0 +1,19 @@
+img.logo {
+  width: 100%
+}
+
+.navbar-brand {
+  padding: 7px 7px;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.navbar-inverse {
+  background-color: #000;
+}
+
+.jumbotron {
+  background-color: #7BB162;
+}
