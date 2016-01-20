@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Kodeklubben Nordnes : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Kodeklubben Nordnes</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/kodeklubben-nordnes">View on GitHub</a>
+
+          <h1 id="project_title">Kodeklubben Nordnes</h1>
+          <h2 id="project_tagline"></h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+<!--         <h3>
+<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+
+<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
+
+<h3>
+<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+
+<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+
+<h3>
+<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating pages manually</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
+<h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p> -->
+     
+<h2>Intro til HTML</h2>
+
+<p>Stort sett alle nettsider du besøker i dag er skrevet ved hjelp av teknologiene HTML, CSS og JavaScript. HTML, som står for, HyperText Markup Language, definerer en nettsides struktur og generell oppbygning. CSS, som står for Cascading Style Sheets, bestemmer en nettsides utseendet, mens JavaScript definerer ytterligere funksjonalitet til nettsiden. </p>
+
+<p>I dette kurset skal vi gå gjennom hva HTML er, hva det er bygget opp av, samt hvordan du kan benyttet HTML til å skrive enkle nettsider. Helt til slutt skal vi diskutere forskjellige metoder du kan benytte for å enkelt publisere nettsidene dine ut på internett. </p>
+
+<p>Dette kapittelet tar for seg HTML strukturen, samt de mest grunnleggende HTML elementene du kan benytte deg av for å strukturere en nettside. </p>
+
+<p>Ettersom det er vanskelig å lage nettsider som kun benytter seg av HTML, vil vi benytte CSS for å bestemme utseendet til nettsidene vi lager. Men det før vi kan sette i gang, må vi sørge for at vi har installert det vi trenger. </p>
+
+<h3>Før du starter</h3>
+<p>Før du starter trenger du to ting:<p>
+<ul>
+  <li>En nettleser</li>
+  <li>En tekst editor</li>
+</ul>
+<p>Alle har nok en nettleser, men i dette kurset skal vi bruke Google Chrome. Hvis du ikke har Chrome på PC'en din må du <a href="https://www.google.com/chrome/browser/desktop/index.html">laste den ned og installere den</a>. Etter hvert kan du bruke andre nettlesere, men det er best at alle begynner med den samme.</p>
+<p>Nettsider skrives som ren tekst og derfor må man ha en tekst editor. Alle datamaskiner har en teksteditor, f.eks. Notepad på Windows. Dene <i>kan</i> brukes, men den er ganske dårlig. Man kan IKKE bruke f.eks. Word eller andre programmer om lar deg formattere teksten (dvs. bestemme hvordan den skal se ut). Det må være ren tekst.</p>
+<p>Vi skal bruke en teksteditor som heter Atom. Gå til <a href="https://atom.io/">https://atom.io/</a> og installer denne. Hvis du bruker en skole-PC kan du kanskje ikke installere Atom, da har vi en egen versjon som ikke krever installasjon.</p>
+
+
+<h3>Lage et prosjekt</h3>
+<p>Når du har disse verktøyene klare kan du begynne. Det første vi må gjøre er å finne ut hvor vi vil lagre filene som vi skal lage.</p>
+<p>Jeg pleier å samle alle kodeprosjektene mine i en mappe "Prosjekter" i hjem-mappen på maskinen min. Lag en mappe som heter Prosjekter f.eks. under Mine Dokumenter eller et annet passende sted. Det viktigste er at du husker hvor den er og at du klarer å finne den igjen. Lag en ny mappe som heter "html-intro" inne i Prosjekter. Det er der vi skal lage filene for denne oppgaven. På den måten blir det lett å skille forskjellige prosjekter fra hverandre. Deretter kan du åpne Atom.</p>
+
+<p>Velg File i menyen og deretter Open Folder. ÅPne mappen du laget tidligere (html-intro).</p>
+
+<p>Når vi skal lage nettsider er de utviklet i et tekst-basert språk som heter HTML, mens utseendet på nettsiden er definert i et annet tekst-basert språk som heter CSS (Cascading Style Sheets). Dersom det er behov for ytterligere funksjonalitet utvikles dette i det tekst-baserte språket JavaScript. I disse kapitlene skal vi fokusere mest på HTML, men vi kommer også til å introdusere og benytte oss av noe CSS for å få nettsiden til å se ut slik som vi ønser den. </p>
+
+<p>Vi skal opprette en ny tekstfil inne i "html-intro" mappen som heter "index.html". Du kan enten opprette denne direkte i Explorer for Windows eller Finder for Mac, eller du kan benytte deg av teksteditoren. I såfall velger du File og så New File, og så Felger du File igjen og deretter Save for å gi den navn. Pass på at filen blir lagret i mappen html-intro</p>
+
+<p>Når du har laget filen kan du kopiere html-koden som du ser under og lime den inn i filen. Dette er det aller enkleste en html-fil kan bestå av.</p>
+
+      <pre>    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head lang="en"&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&lt;&gt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+    &lt;/body&gt;
+    &lt;/html&gt;
+</pre>
+
+<p>Her kan du allerede både se strukturen på både HTML dokumentet, samtidig som du kan se hvordan HTML er strukturert. HTML består av et sett med elementer (tags) som beskriver innholdet i HTML dokumentet. Alle HTML elementer starter og slutter med en vinkel-parantes. </p> 
+
+<p>Selve dokumentet starter med å deklarere dokument typen til HTML, og benytter seg av XML-standard elementet DOCTYPE. De aller fleste nettlesere vil klare å lese HTML dokumentet ditt helt fint selv uten denne dokument deklarasjonen, men det er en god ide å ha den med likevel. </p>
+
+<p>Det neste elementet (&lt;html&gt;) definerer området i dokumentet hvor HTML koden skal plasseres. Dersom du ser helt nederst på linje 10, kan du se at vi avslutter HTML-elementet ved å bruke &lt;/html&gt; Dette er et viktig prinsipp i HTML, og med et fåtalls unntak skal samtlige HTML elementer lukkes på denne måten. </p>
+
+<p>Deretter har vi definert 2 hovedområder i dokumentet vårt, &lt;head&gt; og &lt;body&gt; elementene. I Head-elementet definerer vi sidens metadata. Dette er informasjon om siden som ikke er synlig direkte i nettsiden, men som forteller nettleseren og andre mennesker og maskiner som leser kildekoden til nettsiden viktig informasjon angående nettsiden. </p>
+
+<p>Head-elementet er bl.a. ansvarlig for å definere nettsidens utseendet enten ved å inkludere et style-element eller linke til eksterne CSS dokumenter. I tillegg inneholder Head-elementet et title-element som definerer hva som skal stå i tittel-linjen i nettleseren. </p>
+
+<p>Til slutt i dokumentet har vi Body-elementet som foreløpig er tomt. Body-elementet definerer i bunn og grunn alt som skal vises på selve nettsiden. </p>
+
+<p>Det siste vi skal gjøre før vi går videre med å lære oss de viktigste HTML elementene, er å plassere litt innhold på nettsiden. Først skal vi plassere teksten "Lambertseter Kodeklubb" inne i Title-elementet. Deretter skal vi skrive en overskrift som sier "Velkommen til Lambertseter Kodeklubb" på nettsiden. </p>
+
+<pre>    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head lang="en"&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Kodeklubben Nordnes&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt;Velkommen til Kodeklubben Nordnes!&lt;/h1&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</pre>
+
+<p>For å teste hvordan din nye nettside ser ut i nettleseren kan vi trekke html-intro/index.html filen inn i nettleseren din for å se hvordan den ser ut.</p>
+
+<p>Nå når du har sett resultatet av vår første, enkle nettside er det på tide å se litt nærmere på hvilke HTML elementer vi har tilgjengelig.</p>
+
+
+<h2>De viktigste HTML elementene</h2>
+<div class="pageContent">
+    
+
+    <p>Det finnes en rekke med HTML elementer som er gyldige i HTML5, som er den nyeste standarden innenfor HTML. Dette delkapittlet er ment til å gi en rask oversikt over hvilke elementer som er tilgjengelig, samtidig som den viser hvordan de forksjellige elementene ser ut og benyttes.</p>
+
+<p>Vi kommer ikke til å benytte alle HTML elementene her, men det er likevel greit å ha en oversikt over hvilke elementer som er tilgjengelige og hvordan de oppfører seg. </p>
+
+<h3>Vanlige HTML elementer</h3>
+<h4>Topp-element</h4>
+
+<table class="table table-striped">
+<tbody><tr>
+  <th style="width: 75px;">Element</th>
+  <th>Bruksområde</th>
+  <th style="width: 250px;">Eksempel</th>
+</tr>
+<tr>
+  <td>&lt;html&gt;</td>
+  <td>HTML-elementet definerer innholdet til selve HTML dokumentet. Alle andre elementer må befinne seg inne i dette HTML elementet.</td>
+  <td>-</td>
+</tr>
+</tbody></table>
+<hr>
+
+
+<h4>Metadata</h4>
+<table class="table table-striped">
+<tbody><tr>
+  <th style="width: 75px;">Element</th>
+  <th>Bruksområde</th>
+  <th style="width: 250px;">Eksempel</th>
+</tr>
+<tr>
+  <td>&lt;head&gt;</td>
+  <td>Head elementet definerer dokumentets metadata. Dette er data som ikke vises på nettsiden, men som beskriver selve nettsiden til nettleseren. Sidens tittel, linker til CSS dokumenter og fonter, samt annen meta-data finnes inne i head-elementet.</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;title&gt;</td>
+  <td>Title-elementet definerer nettsidens tittel, som er synlig i nettleserens tittel-linje</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;meta&gt;</td>
+  <td>Meta-elementet definerer informasjon om nettsiden. Denne informasjonen er ikke synlig på selve nettsiden, men benyttes av bl.a. søkemotorer og andre tjenester som skal lese informasjon om siden (f.eks. Facebook, o.l.)</td>
+  <td>-</td>
+</tr>
+</tbody></table>
+
+
+<hr>
+<h4>De aller vanligste HTML elementene</h4>
+
+<p>Her er en oversikt over de aller vanlisgte elementene. I begynnelsen klarer vi oss godt med disse.</p>
+<p>Det finnes mange flere og du kan finne en mye større liste <a href="html_elementer.html">her</a></p>
+
+<table class="table table-striped">
+<tbody><tr>
+  <th style="width: 75px;">Element</th>
+  <th>Bruksområde</th>
+  <th style="width: 250px;">Eksempel</th>
+</tr>
+<tr>
+  <td>&lt;body&gt;</td>
+  <td>Body-elementet avgrenser innholdet som er synlig på nettsiden. Alle HTML elementer som skal være synige må befinne seg inne i body-elementet</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt; &lt;h7&gt;</td>
+  <td>HTML definerer 7 overskriftselementer "h1" til "h7" som fungerer som overskrifter. H1 er den største overskriften, mens H7 er den minste.</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;p&gt;</td>
+  <td>Paragraf elementet benyttes for å pakke inn tekst i et paragraf. Ved å benytte paragraf elementet slipper du å legge til manuelle linjeskift i HTML koden din, samtidig som du får mulighet til å bestemme utseendet og avstand mellom paragrafene dine ved hjelp av CSS</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;a&gt;</td>
+  <td>A-elementet representerer en hyperlink og benyttes til å koble to dokumenter sammen.
+  en link ser slik ut:<pre>&lt;a href="http://bt.no"&gt;BT&lt;/a&gt;</pre></td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;span&gt;</td>
+  <td>Span-elementet definerer tekst som skal gis et spesifikt utseendet. Utseendet defineres i span-elementets class eller style attributter</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;br&gt;</td>
+  <td>Br-elementet definerer et linjeskift i dokumentet</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;img&gt;</td>
+  <td>Img-elementet represeterer et bilde som er angitt via src attributtet.
+  For å vise et bilde på siden bruker man noe sånt som dette:
+  <pre>&lt;img src="bilde.jpg"&gt;</pre>
+  </td><td>-</td>
+</tr>
+<tr>
+
+<tr>
+  <td>&lt;hr&gt;</td>
+  <td>Hr-elementet spesifiserer en horisontal skille-linje som kan benyttes for å skille innholdet på siden
+  </td><td>-</td>
+</tr>
+<tr>
+  <td>&lt;ol&gt;</td>
+  <td>Ol-elementet definerer en nummerert liste</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;ul&gt;</td>
+  <td>Ol-elementet definerer en unummerert liste</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;li&gt;</td>
+  <td>Li-elementet definerer et liste element inne i enten et ol eller ul element
+  </td><td>-</td>
+</tr>
+</tbody></table>
+
+
+<h2>Lag din egen side</h2>
+<p>Nå når vi har gått gjennom hvilke HTML elementer vi har tilgang til å benytte oss av, er det på tide å fortsette med å bygge videre på nettsiden vår. </p>
+
+<h4>Overskrifter</h4>
+<p>Legg til noen overskrifter på siden din ved å bruke h elementer. Gjerne en stor h1 overskrift øverst, og noen mindre overskrifter med f.eks h2 eller h3.</p>
+
+<h4>Avsnitt</h4>
+<p>Lag noen avsnitt for hver overskrift ved å bruke p elementer. Skriv litt om deg selv eller ting du er interessert i.</p>
+
+<h4>Bilder</h4>
+<p>Legg til noen bilder ved å bruke img elementet. Du kan bruke bilder du har på datamaskinen din, aller laste ned noen. Lag en mappe i prosjektet ditt som heter "bilder". Kopier bildene inn i mappen. Da kan du bruke &lt;img src="bilder/bildenavn.jpg"&gt; for å vise bildet på siden din.
+<br>
+Du kan også linke til bilder som ligger på nettet. Da bruker du hele URL'en til bildet i img elementet. Det er vanligvis lurest å laste ned bildene til sin egen maskin. Det kan være at bilder på nettet forsvinner eller endrer seg.</p>
+
+<h4>Linker</h4>
+<p>Prøv å lage noen linker til andre sider på nettet ved å bruke a elementet. Det skal se slik ut: &lt;a href="http://bt.no">Her er en link til BT&lt;/a&gt;</p>
+
+<h4>Lag flere sider</h4>
+<p>Lag noen flere html-filer og lagre dem i samme katalog. Gi dem foskjellige navn. Lag linker til disse sidene ved å bruke a elementet med href. Når du linker til egne sider skal ikk http:// være med, da holder det med filnavnet. Se om du får det til.
+
+</div>
+
+      </section>
+    </div>
+
+    
+
+  </body>
+</html>

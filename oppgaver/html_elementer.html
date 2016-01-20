@@ -1,0 +1,466 @@
+ <!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Kodeklubben Nordnes</title>
+
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+<h1>Oversikt over HTML elementer</h1>
+<h3>Topp-element</h3>
+
+<table class="table table-striped">
+<tbody><tr>
+  <th style="width: 75px;">Element</th>
+  <th>Bruksområde</th>
+  <th style="width: 250px;">Eksempel</th>
+</tr>
+<tr>
+  <td>&lt;html&gt;</td>
+  <td>HTML-elementet definerer innholdet til selve HTML dokumentet. Alle andre elementer må befinne seg inne i dette HTML elementet.</td>
+  <td>-</td>
+</tr>
+</tbody></table>
+
+<h3>Metadata</h3>
+
+<table class="table table-striped">
+<tbody><tr>
+  <th style="width: 75px;">Element</th>
+  <th>Bruksområde</th>
+  <th style="width: 250px;">Eksempel</th>
+</tr>
+<tr>
+  <td>&lt;head&gt;</td>
+  <td>Head elementet definerer dokumentets metadata. Dette er data som ikke vises på nettsiden, men som beskriver selve nettsiden til nettleseren. Sidens tittel, linker til CSS dokumenter og fonter, samt annen meta-data finnes inne i head-elementet.</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;title&gt;</td>
+  <td>Title-elementet definerer nettsidens tittel, som er synlig i nettleserens tittel-linje</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;link&gt;</td>
+  <td>Link-elementet inne i head-elementet benyttes til å linke til eksterne CSS filer</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;meta&gt;</td>
+  <td>Meta-elementet definerer informasjon om nettsiden. Denne informasjonen er ikke synlig på selve nettsiden, men benyttes av bl.a. søkemotorer og andre tjenester som skal lese informasjon om siden (f.eks. Facebook, o.l.)</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;style&gt;</td>
+  <td>Style-elementet lar deg definere CSS inne i selve HTML dokumentet, selv om det er anbefalt å benytte en ekstern CSS fil og link-elementet i stedet.</td>
+  <td>-</td>
+</tr>
+</tbody></table>
+
+<h2>Script</h2>
+
+<table class="table table-striped">
+<tbody><tr>
+  <th style="width: 75px;">Element</th>
+  <th>Bruksområde</th>
+  <th style="width: 250px;">Eksempel</th>
+</tr>
+<tr>
+  <td>&lt;script&gt;</td>
+  <td>Script-elementet benyttes for å laste inn eksterne JavaScript filer, og kan plasseres både inne i head-elementet og body-elementet</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;noscropt&gt;</td>
+  <td>Dersom nettsiden benytter seg av JavaScript, og du ønsker å tilby en versjon som også fungerer for nettlesere som ikke støtter eller har slått av JavaScript, kan noscript-elementet benyttes til å levere en alternativ nettside</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;template&gt;</td>
+  <td>Template-elementet er nytt i HTML5 og benyttes av JavaScript for å kunne definere innhold som genereres av JavaScript</td>
+  <td>-</td>
+</tr>
+</tbody></table>
+
+<h2>Seksjoner</h2>
+
+<table class="table table-striped">
+<tbody><tr>
+  <th style="width: 75px;">Element</th>
+  <th>Bruksområde</th>
+  <th style="width: 250px;">Eksempel</th>
+</tr>
+<tr>
+  <td>&lt;body&gt;</td>
+  <td>Body-elementet avgrenser innholdet som er synlig på nettsiden. Alle HTML elementer som skal være synige må befinne seg inne i body-elementet</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;section&gt;</td>
+  <td>Section-elementet er nytt i HTML5 og definerer en seksjon i HTML dokumentet</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;nav&gt;</td>
+  <td>Nav-elementet er også nytt i HTML5 og definerer et område som inneholder navigasjonslinker</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;article&gt;</td>
+  <td>Også nytt i HTML5 og definerer innhold om kunne eksistert uavhengig av resten av nettsidens innhold</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;aside&gt;</td>
+  <td>Aside-elementet er nytt i HTML5 og definerer innhold som er løst koblet til nettsiden forøvrig, slik at nettsidens øvrige innhold fortsatt er fullgodt om aside-elementet ikke blir vist på nettsiden</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt; &lt;h7&gt;</td>
+  <td>HTML definerer 7 overskriftselementer "h1" til "h7" som fungerer som overskrifter. H1 er den største overskriften, mens H7 er den minste.</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;header&gt;</td>
+  <td>Header-elementet er nytt i HTML5 og definerer sidens header</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;footer&gt;</td>
+  <td>Footer-elementet er nytt i HTML5 og definerer sidens footer</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;address&gt;</td>
+  <td>Adress-elementet er nytt i HTML5 og definerer kontakt-informasjon</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;main&gt;</td>
+  <td>Main-elementet er nytt i HTML5 og definerer dokumentets hovedinnhol</td>
+  <td>-</td>
+</tr>
+</tbody></table>
+
+<h2>Grupperende elementer</h2>
+
+<table class="table table-striped">
+<tbody><tr>
+  <th style="width: 75px;">Element</th>
+  <th>Bruksområde</th>
+  <th style="width: 250px;">Eksempel</th>
+</tr>
+<tr>
+  <td>&lt;p&gt;</td>
+  <td>Paragraf elementet benyttes for å pakke inn tekst i et paragraf. Ved å benytte paragraf elementet slipper du å legge til manuelle linjeskift i HTML koden din, samtidig som du får mulighet til å bestemme utseendet og avstand mellom paragrafene dine ved hjelp av CSS</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;hr&gt;</td>
+  <td>Hr-elementet spesifiserer en horisontal skille-linje som kan benyttes for å skille innholdet på siden/td&gt;
+  </td><td>-</td>
+</tr>
+<tr>
+  <td>&lt;ol&gt;</td>
+  <td>Ol-elementet definerer en nummerert liste</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;ul&gt;</td>
+  <td>Ol-elementet definerer en unummerert liste</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;li&gt;</td>
+  <td>Li-elementet definerer et liste element inne i enten et ol eller ul element
+  </td><td>-</td>
+</tr>
+<tr>
+  <td>&lt;dl&gt;</td>
+  <td>Dl-elementet definerer en definisjonsliste</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;dt&gt;</td>
+  <td>Dt-elementet et liste-element inne i et dl-element. Det etterfølgende dd-elementet definerer dt-elementets verdi</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;dd&gt;</td>
+  <td>Dd-elementet definerer definisjonen til dt-elementet som står forran seg</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;div&gt;</td>
+  <td>Div-elementet definerer en seksjon med i dokumentet</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;figure&gt;</td>
+  <td>Figure-elementet representerer en figur</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;figcapture&gt;</td>
+  <td>Figcapture-elementet definerer ledeteksten til en figur</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;pre&gt;</td>
+  <td>Pre-elementet definerer innhold som er forhåndsformatert og skal skrives ut akkurat slik den er</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;blockquote&gt;</td>
+  <td>Blockquote-elementet definerer innhold som er et sitat fra en annen kilde/td&gt;
+  </td><td>-</td>
+</tr>
+</tbody></table>
+
+<h2>Tekst-formaterende elementer</h2>
+
+<table class="table table-striped">
+<tbody><tr>
+  <th style="width: 75px;">Element</th>
+  <th>Bruksområde</th>
+  <th style="width: 250px;">Eksempel</th>
+</tr>
+<tr>
+  <td>&lt;a&gt;</td>
+  <td>A-elementet representerer en hyperlink og benyttes til å koble to dokumenter sammen</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;data&gt;</td>
+  <td>Data-elementet er nytt i HTML5 og inneholder maskin-leselig informasjon</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;code&gt;</td>
+  <td>Code-elementet definerer en seksjon som inneholder kildekode som skal skrives ut med kildekode-utseendet</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;mark&gt;</td>
+  <td>Mark-elementet er nytt i HTML5 og representeer tekst som er markert</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;span&gt;</td>
+  <td>Span-elementet definerer tekst som skal gis et spesifikt utseendet. Utseendet defineres i span-elementets class eller style attributter</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;br&gt;</td>
+  <td>Br-elementet definerer et linjeskift i dokumentet</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;wbr&gt;</td>
+  <td>Wbr-elementet er nytt i HTML5 og representerer muigheten for et linjeskift, og skal hjelpe nettleseren plassere linjeskift på rett sted i teksten dersom teksten må brytes for å passe inn på siden.</td>
+  <td>-</td>
+</tr>
+</tbody></table>
+
+<h2>Embedded innhold</h2>
+
+<table class="table table-striped">
+<tbody><tr>
+  <th style="width: 75px;">Element</th>
+  <th>Bruksområde</th>
+  <th style="width: 250px;">Eksempel</th>
+</tr>
+<tr>
+  <td>&lt;img&gt;</td>
+  <td>Img-elementet represeterer et bilde som er angitt via src attributtet. /td&gt;
+  </td><td>-</td>
+</tr>
+<tr>
+  <td>&lt;iframe&gt;</td>
+  <td>Iframe-elementet lar deg plassere en annen nettside som en del av din nettside</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;embed&gt;</td>
+  <td>Embed-elementet lar deg bygge inn elementer som ikke vanligvis støttes av nettleseren. F.eks. ved bruk av plugins som Flash eller Silverlight.</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;object&gt;</td>
+  <td>Object-elementet definerer en ekstern ressurs som blir behandlet som et bilde, et HTMl sub-dukument eller ekstern ressurs</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;video&gt;</td>
+  <td>Video-elementet er nytt i HTML5 og benyttes for å vise en HTML5 video</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;audio&gt;</td>
+  <td>Audio-elementet er nytt i HTML5 og benyttes for å spille av en HTML5 lyd</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;source&gt;</td>
+  <td>Source-elementet er nytt i HTML5 og benyttes til å spesifisere alternative ressurser for media elementer i video og audio elementene.</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;canvas&gt;</td>
+  <td>Canvas-elementet er nytt i HTML5 og lar deg tegne 2-dimensjonal grafikk i dokumentet ditt</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;svg&gt;</td>
+  <td>Svg-elementet er nytt i HTML5 og benyttes til å definere vektor-grafikk</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;math&gt;</td>
+  <td>Math-elementet er nytt i HTML5 og benyttes for å vise matematiske uttrykk</td>
+  <td>-</td>
+</tr>
+</tbody></table>
+
+<h2>Tabeller</h2>
+
+<table class="table table-striped">
+<tbody><tr>
+  <th style="width: 75px;">Element</th>
+  <th>Bruksområde</th>
+  <th style="width: 250px;">Eksempel</th>
+</tr>
+<tr>
+  <td>&lt;table&gt;</td>
+  <td>Table-elementet benyttes for å definere en tabell. Tabell-elementet inneholder elementer for å definere tabellens rader og kolonner</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;thead&gt;</td>
+  <td>Thead-elementet benyttes for å definere tabellens header eller overskifts-rad</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;tbody&gt;</td>
+  <td>Tbody-elementet benyttes for å definere tabellens hovedinnhold</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;tfoot&gt;</td>
+  <td>Tfoot-elementet definerer tabellens footer</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;tr&gt;</td>
+  <td>Tr-elementet definerer en tabell-rad</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;th&gt;</td>
+  <td>Th-elementet definerer en tabell-overskriftscelle</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;td&gt;</td>
+  <td>Td-elementet definerer en nomral tabell-celle</td>
+  <td>-</td>
+</tr>
+</tbody></table>
+
+<h2>Skjema elementer</h2>
+
+<table class="table table-striped">
+<tbody><tr>
+  <th style="width: 75px;">Element</th>
+  <th>Bruksområde</th>
+  <th style="width: 250px;">Eksempel</th>
+</tr>
+<tr>
+  <td>&lt;form&gt;</td>
+  <td>Form elementet benyttes for å definere et Skjema i HTML dokumentet</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;fieldset&gt;</td>
+  <td>Fieldset-elementet benyttes for å definere et sett med skjema-felter som hører sammen</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;legend&gt;</td>
+  <td>Legend-elementet definerer en tilhørende tekst til et fieldset-element</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;label&gt;</td>
+  <td>Label-elementet definerer en tekst, eller en etikett som hører til et input-element</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;button&gt;</td>
+  <td>Button-elementet definerer en trykkbar knapp i skjemaet</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;input&gt;</td>
+  <td>Input-elementet definerer en input-felt i skjemaet</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;select&gt;</td>
+  <td>Select-elementet definerer en rullgardinsmeny hvor hvert element i rullgardinen defineres via et option-element</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;option&gt;</td>
+  <td>Option-elementet definerer et element inne i et select-element</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;textarea&gt;</td>
+  <td>Textarea-elementet definerer et tekstfelt som kan inneholde flere rader</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;form&gt;</td>
+  <td>Form elementet benyttes for å definere et Skjema i HTML dokumentet</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;datalist&gt;</td>
+  <td>Datalist-elementet er nytt i HTML5 og definerer et sett med valg for et annet select-element</td>
+  <td>-</td>
+</tr>
+</tbody></table>
+
+<h2>Andre</h2>
+
+<table class="table table-striped">
+<tbody><tr>
+  <th style="width: 75px;">Element</th>
+  <th>Bruksområde</th>
+  <th style="width: 250px;">Eksempel</th>
+</tr>
+<tr>
+  <td>&lt;menu&gt;</td>
+  <td>Menu-elementet er nytt i HTML5 og definerer en liste med kommandoer</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;menuitem&gt;</td>
+  <td>Menuitem-elementet er nytt i HTML5 og definerer en kommando som brukeren kan kalle.</td>
+  <td>-</td>
+</tr>
+</tbody></table>
+
+</div>
+
+<!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
