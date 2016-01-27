@@ -53,11 +53,11 @@
 <p>Når du har disse verktøyene klare kan du begynne. Det første vi må gjøre er å finne ut hvor vi vil lagre filene som vi skal lage.</p>
 <p>Jeg pleier å samle alle kodeprosjektene mine i en mappe "Prosjekter" i hjem-mappen på maskinen min. Lag en mappe som heter Prosjekter f.eks. under Mine Dokumenter eller et annet passende sted. Det viktigste er at du husker hvor den er og at du klarer å finne den igjen. Lag en ny mappe som heter "html-intro" inne i Prosjekter. Det er der vi skal lage filene for denne oppgaven. På den måten blir det lett å skille forskjellige prosjekter fra hverandre. Deretter kan du åpne Atom.</p>
 
-<p>Velg File i menyen og deretter Open Folder. ÅPne mappen du laget tidligere (html-intro).</p>
+<p>Velg File i menyen og deretter Open Folder. Åpne mappen du laget tidligere (html-intro).</p>
 
-<p>Når vi skal lage nettsider er de utviklet i et tekst-basert språk som heter HTML, mens utseendet på nettsiden er definert i et annet tekst-basert språk som heter CSS (Cascading Style Sheets). Dersom det er behov for ytterligere funksjonalitet utvikles dette i det tekst-baserte språket JavaScript. I disse kapitlene skal vi fokusere mest på HTML, men vi kommer også til å introdusere og benytte oss av noe CSS for å få nettsiden til å se ut slik som vi ønser den. </p>
+<p>Når vi skal lage nettsider er de utviklet i et tekst-basert språk som heter HTML, mens utseendet på nettsiden er definert i et annet tekst-basert språk som heter CSS (Cascading Style Sheets). Dersom det er behov for ytterligere funksjonalitet utvikles dette i det tekst-baserte språket JavaScript. I disse kapitlene skal vi fokusere mest på HTML, men vi kommer også til å introdusere og benytte oss av noe CSS for å få nettsiden til å se ut slik som vi ønsker den. </p>
 
-<p>Vi skal opprette en ny tekstfil inne i "html-intro" mappen som heter "index.html". Du kan enten opprette denne direkte i Explorer for Windows eller Finder for Mac, eller du kan benytte deg av teksteditoren. I såfall velger du File og så New File, og så Felger du File igjen og deretter Save for å gi den navn. Pass på at filen blir lagret i mappen html-intro</p>
+<p>Vi skal opprette en ny tekstfil inne i "html-intro" mappen som heter "index.html". Du kan enten opprette denne direkte i Explorer for Windows eller Finder for Mac, eller du kan benytte deg av teksteditoren. I såfall velger du File og så New File, og så velger du File igjen og deretter Save for å gi den navn. Pass på at filen blir lagret i mappen html-intro</p>
 
 <p>Når du har laget filen kan du kopiere html-koden som du ser under og lime den inn i filen. Dette er det aller enkleste en html-fil kan bestå av.</p>
 
@@ -85,7 +85,7 @@
 
 <p>Til slutt i dokumentet har vi Body-elementet som foreløpig er tomt. Body-elementet definerer i bunn og grunn alt som skal vises på selve nettsiden. </p>
 
-<p>Det siste vi skal gjøre før vi går videre med å lære oss de viktigste HTML elementene, er å plassere litt innhold på nettsiden. Først skal vi plassere teksten "Lambertseter Kodeklubb" inne i Title-elementet. Deretter skal vi skrive en overskrift som sier "Velkommen til Lambertseter Kodeklubb" på nettsiden. </p>
+<p>Det siste vi skal gjøre før vi går videre med å lære oss de viktigste HTML elementene, er å plassere litt innhold på nettsiden. Først skal vi plassere teksten "Kodeklubben Nordnes" inne i title-elementet. Deretter skal vi skrive en overskrift som sier "Velkommen til Kodeklubben Nordnes" på nettsiden. </p>
 
 <pre>    &lt;!DOCTYPE html&gt;
     &lt;html&gt;
@@ -392,11 +392,45 @@ Hvis vi hadde hatt flere elementer inni det andre avsnittet, ville de arvet den 
   <td>height og width</td>
   <td>Setter høyden og bredden på elementet. De kan brukes hver for seg. Hvis bare den ene er satt vil den andre kanskje beregnes automatisk.
       Hvis vi f.eks setter bare height på et bilde, vil width justeres automatisk slik at hele bildet blir større.</td>
-  <td></td>
+  <td>height: 20px<br>
+      width: 100%<br>
+      height: auto</td>
+</tr>
+<tr>
+  <td>float</td>
+  <td>Brukes til å få et element til å "flyte". At det flyter vil si at det legger seg til høyre eller venstre, og at tekst og andre elementer "flyter" rundt elementet. Det brukes til å f.eks. plassere et bilde i en artikkel og så få teksten til å plassere seg fint rundt bildet.
+  Float brukes også til layout, f.eks. plassere en navigasjonsmeny helt til venstre og så selve sideinnholdet ved siden av. I så fall bruker vi float: left; på menyen.</td>
+  <td>
+    <pre>
+    &lt;div style="float: left;"&gt;
+      Menyen her
+    &lt;/div&gt;
+
+    &lt;div&gt;
+      Sideinnhold
+    &lt;/div&gt;
+    </pre>
+    <br>
+    float: left;<br>
+    float: right;<br>
+    float: none;<br>
+    </td>
 </tr>
 
 </tbody>
 </table>
+
+<h2>Prøv deg frem med CSS</h2>
+<p>Nå når vi har lært noen av de vanligste CSS attributtene kan du prøve å bruke dem på siden din.</p>
+<ul>
+  <li>Prøv å sette farger på forskjellige ting.</li>
+  <li>Prøv å sette en bakgrunnsfarge på selve siden.</li>
+  <li>Prøv å sette et bakgrunnsbilde, og se hva som skjer.</li>
+  <li>Prøv å ekperimentere med de andre background-attributtene som background-position, background-size og background-repeat. Se om du får et bilde til å dekke hele siden.</li>
+  <li>Prøv å bruke border på f.eks. en &lt;div&gt;. Hva skjer? Prøv å endre størrelsen på div-en med height og width.</li>
+  <li>Prøv deg frem med margin og padding. Husk at markin lager mellomrom på utsiden av elementet, mens padding lager mellomrom inni elementet.
+  Prøv å plassere teksten din på en fin måte ved å bruke padding og margins. Legg gjerne til ekstra &lt;div&gt; elementer for å få det sånn som du vil.</li>
+  <li>Prøv å lage en liten meny til venstre på siden ved å bruke float. Lag en &lt;div&gt; som inneholder menyen og sett "float: left;" på den. Plasser selve innholdet i en ny &lt;div&gt; like etter den første, og se hva som skjer. </li>
 
 
 </div>
