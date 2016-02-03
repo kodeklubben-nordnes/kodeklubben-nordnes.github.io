@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Kodeklubben Nordnes : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+
+    <title>Kodeklubben Nordnes</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/kodeklubben-nordnes">View on GitHub</a>
+
+          <h1 id="project_title">Kodeklubben Nordnes</h1>
+          <h2 id="project_tagline"></h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>Tabeller</h2>
+<p> En ting vi har hoppet over frem til nå er tabeller. HTML har god støtte for å lage tabeller og disse kan stiles på mange forskjellige måter med CSS. Listene med HTML-elementer og CSS-attributter på denne siden er eksempel på tabeller. Til å lage tabeller bruker vi disse elementene:</p>
+
+<table class="table table-striped">
+<tbody><tr>
+  <th style="width: 75px;">Element</th>
+  <th>Bruksområde</th>
+  <th style="width: 250px;">Eksempel</th>
+</tr>
+<tr>
+  <td>&lt;table&gt;</td>
+  <td>Table er toppelementet for en tabell. Alle de andre elementene brukes inni &lt;table&gt;</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;tr&gt;</td>
+  <td>&lt;tr&gt; er forkortelse for <i>table row</i> (eller <i>tabellrad</i> på norsk) og definerer en horisontal rad i tabellen.</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;td&gt;</td>
+  <td>&lt;td&gt; er forkortelse for <i>table data</i>, eller <i>tabelldata</i> på norsk) og definerer en det vi ofte kaller en celle i tabellen. Flere td-elementer plasseres inni tr-elementer. Flere td-elementer gir oss flere vertikale <i>kolonner</i>. Det er viktig å passe på at alle radene har like mange td-elementer, ellers ser tabellen veldig rar ut.</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;th&gt;</td>
+  <td>&lt;th&gt; er forkortelse for <i>table header</i> og brukes til å lage overskrifter for hver kolonne. th brukes akkurat som td, men altså bare for overskriften. </td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;thead&gt;</td>
+  <td>thead brukes til å gruppere tr-elementene som utgjør <i>headeren</i> til tabellen. Altså en eller flere rader som vises over selve innholdet og typisk inneholder overskrifter for hver kolonne.</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;tbody&gt;</td>
+  <td>tbody brukes til å gruppere tr-elementene som utgjør selve innholdet i tabellen.</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td>&lt;tfoot&gt;</td>
+  <td>tfoot brukes til å gruppere tr-elementene som utgjør <i>footeren</i> til tabellen, altså en eller flere rader som er helt nederst i tabellen. Disse brukes ofte til å vise f.eks summen av alle verdiene i en kolonne.</td>
+  <td>-</td>
+</tr>
+</tbody></table>
+
+
+<pre>
+  &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th style="width: 75px;"&gt;Kolonne1&lt;/th&gt;
+          &lt;th&gt;Kolonne2&lt;/th&gt;
+          &lt;th style="width: 250px;"&gt;Kolonne3&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Verdi1&lt;/td&gt;
+          &lt;td&gt;Verdi2&lt;/td&gt;
+          &lt;td&gt;Verdi3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Verdi4&lt;/td&gt;
+          &lt;td&gt;Verdi5&lt;/td&gt;
+          &lt;td&gt;Verdi6&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+</pre>
+<p>Som vil se omtrent sånn ut:</p>
+
+<div class="example">
+  <table>
+      <thead>
+        <tr>
+          <th style="width: 75px;">Kolonne1</th>
+          <th>Kolonne2</th>
+          <th style="width: 250px;">Kolonne3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Verdi1</td>
+          <td>Verdi2</td>
+          <td>Verdi3</td>
+        </tr>
+        <tr>
+          <td>Verdi4</td>
+          <td>Verdi5</td>
+          <td>Verdi6</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Det vil si, det vil ikke se helt sånn ut, for på denne siden er det CSS som får tabellene til å se litt bedre ut enn vanlige tabeller.
+ </p>
+
+<p>Tabeller kan brukes til å bestemme hvor ting skal plasseres på siden hvis man skjuler rammen rundt og gjør hele tabellen usynlig.
+Det ble brukt veldig mye før, men nå bruker de fleste CSS til å gjøre dette.</p>
+
+<h4> Oppgave: Lag en tabell</h4>
+<p>
+<ul>
+  <li>Prøv å lage en tabell på siden din og se hvordan det blir. </li>
+  <li>Prøv å endre utseende på tabellen ved å bruke f.eks border, background-color, padding og andre CSS attributter.</li>
+  <li>Prøv å putte andre ting enn tekst inn i td-elementene, f.eks bilder.</li>
+</ul>
+</p>
+
+
+<h2>Lister</h2>
+<p>En annen viktig ting vi har hoppet over er lister. Lister blir mye brukt i HTML, både til å liste opp forskjellige ting i en punktliste (som i oppgaven over), og til å lage f.eks menyer. Lister kan stiles med CSS til å ikke se ut som en liste i det hele tatt, alle elementene kan f.eks ligge etter hverandre bortover i stedet for nedover.</p>
+
+<p>Det finnes i hovedsak to typer lister nummererte eller ordnede (&lt;ol&gt;) og unummererte (&lt;ul&gt;). Nummererte lister har et tall eller en bokstav foran hver linje, og unummererte har et symbol som en sirkel eller en firkant. Hvordan dette skal vises kan man styre med type-attributten på nummererte lister og CSS-attributten 'list-style-type' på unummererte lister.</p>
+<p>Inni listen har man &lt;li&gt; elementer, ett for hver linje. Nummererte lister vil da bli automatisk nummerert når vi legger til nye linjer.</p>
+
+<p>En enkel unummerert liste kan se slik ut (legg merke til at vi bruker &lt;ul&gt; som betyr unummerert): 
+<pre>
+&lt;ul style="list-style-type:disc"&gt;
+  &lt;li&gt;Kaffe&lt;/li&gt;
+  &lt;li&gt;Te&lt;/li&gt;
+  &lt;li&gt;Melk&lt;/li&gt;
+&lt;/ul&gt; 
+</pre>
+
+<p>Dette vil vises som: </p>
+<div class="example">
+<ul style="list-style-type:disc">
+  <li>Kaffe</li>
+  <li>Te</li>
+  <li>Melk</li>
+</ul> 
+
+</div>
+
+<p>En nummerert liste ser slik ut (legg merke til at vi bruker &lt;ol&gt;):</p>
+<pre>
+&lt;ol&gt;
+  &lt;li&gt;Kaffe&lt;/li&gt;
+  &lt;li&gt;Te&lt;/li&gt;
+  &lt;li&gt;Melk&lt;/li&gt;
+&lt;/ol&gt; 
+
+</pre>
+<p>Dette vil vises som: </p>
+<div class="example">
+<ol>
+  <li>Kaffe</li>
+  <li>Te</li>
+  <li>Melk</li>
+</ol> 
+</div>
+
+
+      </section>
+    </div>
+  </body>
+</html>
