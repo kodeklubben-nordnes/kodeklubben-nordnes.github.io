@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Kodeklubben Nordnes : ">
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+    <title>Kodeklubben Nordnes</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+      <header class="inner">
+        <a id="forkme_banner" href="https://github.com/kodeklubben-nordnes">View on GitHub</a>
+        <h1 id="project_title">Kodeklubben Nordnes</h1>
+        <h2 id="project_tagline"></h2>
+      </header>
+    </div>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>Stiling med CSS</h2>
+        <p>Foreløpig ser nettsiden vår ganske kjedelig ut, bare svart text på hvit bakgrunn. Det er fordi HTML bare definerer hva siden skal inneholde, og ikke hvordan det skal se ut. For å bestemme hvordan siden skal se ut bruker vi et annet språk som kalles CSS. (Det er en forkortelse for Cascading Style Sheets.) CSS brukes altså til å <i>stile</i> en webside, altså styre hvordan den skal se ut.</p>
+        <h4>Inline CSS</h4>
+        <p>Den enkleste måten å bruke CSS på er å bruke style-attributten direkte på html-elementene. Dette kalles <i>inline CSS</i> Det lett å lære og enkelt når vi ikke har så mye CSS men kan bli veldig uoversiktlig når det begynner å bli mye. Senere skal vi lære å plassere CSS i en egen fil, men vi begynner med den enkle måten først.</p>
+        <p>CSS består av attributter og verdier. F.eks kan vi bruke attributten "color" til å sette fargen på noe og 'text-align' til å midtstille
+        tekst slik som dette: </p>
+        <p>
+        <pre>&lt;h1 style="color: red; text-align: center;"&gt;Velkommen til Kodeklubben!&lt;/h1&gt;</pre>
+      </p>
+      <p>Dette vil vises som</p>
+      <div class="example">
+        <h1 style="color:red; text-align:center;">Velkommen til Kodeklubben!</h1>
+      </div>
+      <p>Vi setter altså CSS på et element ved å bruke 'style' attributten og så liste opp CSS attributter inni den. Vi kan ha så mangge CSS attributter vi vil på hvert element, men hvis det blir veldig mange er det lurere å flytte dem til en egen fil. Det skal vi lære litt senere.
+        Hver CSS attributt er bygget opp slik:
+      </p>
+    <pre> attributt: verdi;</pre>
+    <p> CSS <i>arves</i> av alle elementene som er <i>inni</i> det elementet som CSS'en er satt på. Samtidig <i>overstyres</i> CSS attributter hvis de også er satt på et element som er inni.</p>
+    <pre >
+        &lt;div style="text-align: center; color: red"&gt;
+          &lt;p&gt;
+            Første avsnitt
+          &lt;/p&gt;
+          &lt;p style="color: blue"&gt;
+            &lt;span&gt;Andre avsnitt&lt;/span&gt;
+          &lt;/p&gt;
+        &lt;/div&gt;
+    </pre>
+    <p>Vises som:</p>
+    <div class="example">
+      <div style="text-align: center; color: red">
+        <p>
+          Første avsnitt
+        </p>
+        <p style="color: blue">
+          <span>Andre avsnitt</span>
+        </p>
+      </div>
+    </div>
+    <p> Begge avsnittene inni div-elementet arver stilingen fra div'en. Derfor blir begge midtstilt. Det første avsnittet arver også den røde teksten,
+      men på det andre avsnittet har vi sagt at teksten skal være blå i stedet. Så selv om vi arvet rød tekst overstyrer vi den til å bli blå i stedet.
+    Hvis vi hadde hatt flere elementer inni det andre avsnittet, ville de arvet den blå fargen i stedet for den røde.</p>
+    <p>Fordi CSS attributtene overstyrer hverandre, kan ofte være vanskelig å finne ut hvorfor det blir som de blir når vi har mye CSS. Da er det veldig nyttig å bruke utviklerverktøyet som finnes i de fleste nettlesere (f.eks Chrome Developer Tools) til å undersøke hvilken CSS som er gjeldende for et element og hvor denne kommer fra.</p>
+    <p>Utviklerverktøyet er også veldig nyttig til å prøve forskjellige attributter og verdier og se hvordan ting vil se ut. Prøv det!</p>
+    <h4>De vanligste CSS attributtene</h4>
+    <p>Det finnes veldig mange CSS attributter og det finnes folk som jobber bare med å skrive CSS. Vi kan ikke gå gjennom alle her, men vi skal lære noen av de vanligste. For å lære flere CSS attributter og mer om CSS kan man finne masse informasjon på internett. F.eks på
+      <a href="http://www.w3schools.com/cssref/default.asp">w3schools</a> eller
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">Mozilla Developer Network</a>
+    </p>
+    <p>Her er noen av den vanligste CSS attributtene:</p>
+    <table class="table table-striped">
+      <tbody><tr>
+        <th style="width: 75px;">Attributt</th>
+        <th>Bruksområde</th>
+        <th style="width: 250px;">Eksempel</th>
+      </tr>
+      <tr>
+        <td>color</td>
+        <td>Setter forgrunnsfargen. Noen farger kan angis med <a href="http://www.w3schools.com/colors/colors_names.asp">navn</a>. For andre farger må vi bruke <a href="http://www.w3schools.com/cssref/css_colors.asp">fargekoder</a></td>
+        <td>color: red;<br>color: #ff0000;</td>
+      </tr>
+      <tr>
+        <td>background-color</td>
+        <td>Setter bakgrunnsfargen. Hvis vi setter denne på &lt;body&gt; settes fargen på hele siden.</td>
+        <td>background-color: red;<br>bacjground-color: #ff0000;</td>
+      </tr>
+      <tr>
+        <td>background-image</td>
+        <td>Brukes til å sette et bilde som bakgrunn på &lt;body&gt; elementet. Bildet gjentas mange ganger til det dekker hele bakgrunnen.
+          Det finnes flere attributter som styrer bakgrunnsbildet f.eks background-position, background-size og background-repeat. Slå opp disse på <a href="http://www.w3schools.com/cssref/default.asp">w3schools</a> eller
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">MDN</a> for å finne ut mer om dem.
+        </td>
+        <td>background-image: url("bakgrunn.jpg");</td>
+      </tr>
+      <tr>
+        <td>font-size</td>
+        <td>Setter størrelsen på teksten. Settes som regel i piksler (px) eller punkter (pt)</td>
+        <td>font-size: 12px;<br>font-size: 22pt;</td>
+      </tr>
+      <tr>
+        <td>text-align</td>
+        <td>Justerer teksten til høyre, venstre eller midtstilt.</td>
+        <td>text-align: left;<br>
+          text-align: right;<br>
+          text-align: center;<br>
+        text-align: justify;</td>
+      </tr>
+      <tr>
+        <td>border</td>
+        <td>Brukes til å tegne en ramme rundt et element. Brukes ofte på et &lt;div&gt; element. De finnes mange andre attributter som
+          begynner med border- som lar oss styre i detalj hvordan rammen skal se ut. Disse kan du finne selv på
+          <a href="http://www.w3schools.com/cssref/default.asp">w3schools</a> eller
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">MDN</a>. Border-attributten tar tre parametre:
+          <a href="http://www.w3schools.com/cssref/pr_border-width.asp">border-width</a>,
+          <a href="http://www.w3schools.com/cssref/pr_border-style.asp">border-style</a> og
+          <a href="http://www.w3schools.com/cssref/pr_border-color.asp">border-color</a>.
+          Hver av disse er egne attributter som kan brukes hver for seg i stedet for border.
+        </td>
+        <td>border: 1px solid blue;<br>
+          border: 2px dotted red;<br>
+        border: medium dashed green; </td>
+      </tr>
+      <tr>
+        <td>padding</td>
+        <td>Padding betyr polstring og brukes til å lage litt "luft" rundt <i>innholdet</i> i et element. Hvis elementet har en border,
+          vil paddingen ligge på <i>innsiden</i> av den. Vi kan ha padding
+          på alle fire sidene eller bare på noen av dem. Padding-attributten tar 1 til 4 parametre. Hvis vi bruker bare 1
+        blir det like mye padding på alle fire sidene. Hvis vi bruker to er den første toppen og bunnen, og den andre er høyre og venstre.</td>
+        <td>padding: 10px;<br>
+          padding: 10px 20px;<br>
+        padding: 10px 20px 30px 40px;</td>
+      </tr>
+      <tr>
+        <td>margin</td>
+        <td>Margin ligner på padding, men brukes til å lae "luft" mellom dette elementet og <i>andre elementer</i>. Hvis elementet har border vil marginen ligge på <i>utsiden</i> av den. Vi kan bruke 1 til 4 parametre som fungerer på samme måten som for padding.</td>
+        <td>margin: 10px;<br>
+          margin: 10px 20px;<br>
+        margin: 10px 20px 30px 40px;</td>
+      </tr>
+      <tr>
+        <td>height og width</td>
+        <td>Setter høyden og bredden på elementet. De kan brukes hver for seg. Hvis bare den ene er satt vil den andre kanskje beregnes automatisk.
+        Hvis vi f.eks setter bare height på et bilde, vil width justeres automatisk slik at hele bildet blir større.</td>
+        <td>height: 20px<br>
+          width: 100%<br>
+        height: auto</td>
+      </tr>
+      <tr>
+        <td>float</td>
+        <td>Brukes til å få et element til å "flyte". At det flyter vil si at det legger seg til høyre eller venstre, og at tekst og andre elementer "flyter" rundt elementet. Det brukes til å f.eks. plassere et bilde i en artikkel og så få teksten til å plassere seg fint rundt bildet.
+        Float brukes også til layout, f.eks. plassere en navigasjonsmeny helt til venstre og så selve sideinnholdet ved siden av. I så fall bruker vi float: left; på menyen.</td>
+        <td>
+              <pre>
+  &lt;div style="float: left;"&gt;
+    Menyen her
+  &lt;/div&gt;
+  &lt;div&gt;
+    Sideinnhold
+  &lt;/div&gt;
+          </pre>
+          <br>
+          float: left;<br>
+          float: right;<br>
+          float: none;<br>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>Prøv deg frem med CSS</h2>
+  <p>Nå når vi har lært noen av de vanligste CSS attributtene kan du prøve å bruke dem på siden din.</p>
+  <ul>
+    <li>Prøv å sette farger på forskjellige ting.</li>
+    <li>Prøv å sette en bakgrunnsfarge på selve siden.</li>
+    <li>Prøv å sette et bakgrunnsbilde, og se hva som skjer.</li>
+    <li>Prøv å ekperimentere med de andre background-attributtene som background-position, background-size og background-repeat. Se om du får et bilde til å dekke hele siden.</li>
+    <li>Prøv å bruke border på f.eks. en &lt;div&gt;. Hva skjer? Prøv å endre størrelsen på div-en med height og width.</li>
+    <li>Prøv deg frem med margin og padding. Husk at markin lager mellomrom på utsiden av elementet, mens padding lager mellomrom inni elementet.
+    Prøv å plassere teksten din på en fin måte ved å bruke padding og margins. Legg gjerne til ekstra &lt;div&gt; elementer for å få det sånn som du vil.</li>
+    <li>Prøv å lage en liten meny til venstre på siden ved å bruke float. Lag en &lt;div&gt; som inneholder menyen og sett "float: left;" på den. Plasser selve innholdet i en ny &lt;div&gt; like etter den første, og se hva som skjer. </li>
+  </ul>
+  <p></p>
+  <p>Det neste vi skal lære er <a href="tabeller-lister.html">tabeller og lister</a></p>
+  <!-- </div> -->
+</section>
+</div>
+
+</body>
+</html>

@@ -1,450 +1,323 @@
 <!DOCTYPE html>
 <html>
-
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Kodeklubben Nordnes : ">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
-
-    <title>Kodeklubben Nordnes</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/kodeklubben-nordnes">View on GitHub</a>
-
-          <h1 id="project_title">Kodeklubben Nordnes</h1>
-          <h2 id="project_tagline"></h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-     
-<h2>Intro til HTML</h2>
-
-<p>Stort sett alle nettsider du besøker i dag er skrevet ved hjelp av teknologiene HTML, CSS og JavaScript. HTML, som står for, HyperText Markup Language, definerer en nettsides struktur og generell oppbygning. CSS, som står for Cascading Style Sheets, bestemmer en nettsides utseendet, mens JavaScript definerer ytterligere funksjonalitet til nettsiden. </p>
-
-<p>I dette kurset skal vi gå gjennom hva HTML er, hva det er bygget opp av, samt hvordan du kan benyttet HTML til å skrive enkle nettsider. Helt til slutt skal vi diskutere forskjellige metoder du kan benytte for å enkelt publisere nettsidene dine ut på internett. </p>
-
-<p>Dette kapittelet tar for seg HTML strukturen, samt de mest grunnleggende HTML elementene du kan benytte deg av for å strukturere en nettside. </p>
-
-<p>Ettersom det er vanskelig å lage nettsider som kun benytter seg av HTML, vil vi benytte CSS for å bestemme utseendet til nettsidene vi lager. Men det før vi kan sette i gang, må vi sørge for at vi har installert det vi trenger. </p>
-
-<h3>Før du starter</h3>
-<p>Før du starter trenger du to ting:<p>
-<ul>
-  <li>En nettleser</li>
-  <li>En tekst editor</li>
-</ul>
-<p>Alle har nok en nettleser, men i dette kurset skal vi bruke Google Chrome. Hvis du ikke har Chrome på PC'en din må du <a href="https://www.google.com/chrome/browser/desktop/index.html">laste den ned og installere den</a>. Etter hvert kan du bruke andre nettlesere, men det er best at alle begynner med den samme.</p>
-<p>Nettsider skrives som ren tekst og derfor må man ha en tekst editor. Alle datamaskiner har en teksteditor, f.eks. Notepad på Windows. Dene <i>kan</i> brukes, men den er ganske dårlig. Man kan IKKE bruke f.eks. Word eller andre programmer om lar deg formattere teksten (dvs. bestemme hvordan den skal se ut). Det må være ren tekst.</p>
-<p>Vi skal bruke en teksteditor som heter Atom. Gå til <a href="https://atom.io/">https://atom.io/</a> og installer denne. Hvis du bruker en skole-PC kan du kanskje ikke installere Atom, da har vi en egen versjon som ikke krever installasjon.</p>
-
-
-<h3>Lage et prosjekt</h3>
-<p>Når du har disse verktøyene klare kan du begynne. Det første vi må gjøre er å finne ut hvor vi vil lagre filene som vi skal lage.</p>
-<p>Jeg pleier å samle alle kodeprosjektene mine i en mappe "Prosjekter" i hjem-mappen på maskinen min. Lag en mappe som heter Prosjekter f.eks. under Mine Dokumenter eller et annet passende sted. Det viktigste er at du husker hvor den er og at du klarer å finne den igjen. Lag en ny mappe som heter "html-intro" inne i Prosjekter. Det er der vi skal lage filene for denne oppgaven. På den måten blir det lett å skille forskjellige prosjekter fra hverandre. Deretter kan du åpne Atom.</p>
-
-<p>Velg File i menyen og deretter Open Folder. Åpne mappen du laget tidligere (html-intro).</p>
-
-<p>Når vi skal lage nettsider er de utviklet i et tekst-basert språk som heter HTML, mens utseendet på nettsiden er definert i et annet tekst-basert språk som heter CSS (Cascading Style Sheets). Dersom det er behov for ytterligere funksjonalitet utvikles dette i det tekst-baserte språket JavaScript. I disse kapitlene skal vi fokusere mest på HTML, men vi kommer også til å introdusere og benytte oss av noe CSS for å få nettsiden til å se ut slik som vi ønsker den. </p>
-
-<p>Vi skal opprette en ny tekstfil inne i "html-intro" mappen som heter "index.html". Du kan enten opprette denne direkte i Explorer for Windows eller Finder for Mac, eller du kan benytte deg av teksteditoren. I såfall velger du File og så New File, og så velger du File igjen og deretter Save for å gi den navn. Pass på at filen blir lagret i mappen html-intro</p>
-
-<p>Når du har laget filen kan du kopiere html-koden som du ser under og lime den inn i filen. Dette er det aller enkleste en html-fil kan bestå av.</p>
-
-      <pre>    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-    &lt;head lang="en"&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;title&lt;&gt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-
-    &lt;/body&gt;
-    &lt;/html&gt;
-</pre>
-
-<p>Her kan du allerede både se strukturen på både HTML dokumentet, samtidig som du kan se hvordan HTML er strukturert. HTML består av et sett med elementer (tags) som beskriver innholdet i HTML dokumentet. Alle HTML elementer starter og slutter med en vinkel-parantes. </p> 
-
-<p>Selve dokumentet starter med å deklarere dokument typen til HTML, og benytter seg av XML-standard elementet DOCTYPE. De aller fleste nettlesere vil klare å lese HTML dokumentet ditt helt fint selv uten denne dokument deklarasjonen, men det er en god ide å ha den med likevel. </p>
-
-<p>Det neste elementet (&lt;html&gt;) definerer området i dokumentet hvor HTML koden skal plasseres. Dersom du ser helt nederst på linje 10, kan du se at vi avslutter HTML-elementet ved å bruke &lt;/html&gt; Dette er et viktig prinsipp i HTML, og med et fåtalls unntak skal samtlige HTML elementer lukkes på denne måten. </p>
-
-<p>Deretter har vi definert 2 hovedområder i dokumentet vårt, &lt;head&gt; og &lt;body&gt; elementene. I Head-elementet definerer vi sidens metadata. Dette er informasjon om siden som ikke er synlig direkte i nettsiden, men som forteller nettleseren og andre mennesker og maskiner som leser kildekoden til nettsiden viktig informasjon angående nettsiden. </p>
-
-<p>Head-elementet er bl.a. ansvarlig for å definere nettsidens utseendet enten ved å inkludere et style-element eller linke til eksterne CSS dokumenter. I tillegg inneholder Head-elementet et title-element som definerer hva som skal stå i tittel-linjen i nettleseren. </p>
-
-<p>Til slutt i dokumentet har vi Body-elementet som foreløpig er tomt. Body-elementet definerer i bunn og grunn alt som skal vises på selve nettsiden. </p>
-
-<p>Det siste vi skal gjøre før vi går videre med å lære oss de viktigste HTML elementene, er å plassere litt innhold på nettsiden. Først skal vi plassere teksten "Kodeklubben Nordnes" inne i title-elementet. Deretter skal vi skrive en overskrift som sier "Velkommen til Kodeklubben Nordnes" på nettsiden. </p>
-
-<pre>    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-    &lt;head lang="en"&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;title&gt;Kodeklubben Nordnes&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-    &lt;h1&gt;Velkommen til Kodeklubben Nordnes!&lt;/h1&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-</pre>
-
-<p>For å teste hvordan din nye nettside ser ut i nettleseren kan vi trekke html-intro/index.html filen inn i nettleseren din for å se hvordan den ser ut.</p>
-
-<p>Nå når du har sett resultatet av vår første, enkle nettside er det på tide å se litt nærmere på hvilke HTML elementer vi har tilgjengelig.</p>
-
-
-<h2>De viktigste HTML elementene</h2>
-<div class="pageContent">
-    
-
-    <p>Det finnes en rekke med HTML elementer som er gyldige i HTML5, som er den nyeste standarden innenfor HTML. Dette delkapittlet er ment til å gi en rask oversikt over hvilke elementer som er tilgjengelig, samtidig som den viser hvordan de forksjellige elementene ser ut og benyttes.</p>
-
-<p>Vi kommer ikke til å benytte alle HTML elementene her, men det er likevel greit å ha en oversikt over hvilke elementer som er tilgjengelige og hvordan de oppfører seg. </p>
-
-<h3>Vanlige HTML elementer</h3>
-<h4>Topp-element</h4>
-
-<table class="table table-striped">
-<tbody><tr>
-  <th style="width: 75px;">Element</th>
-  <th>Bruksområde</th>
-  <th style="width: 250px;">Eksempel</th>
-</tr>
-<tr>
-  <td>&lt;html&gt;</td>
-  <td>HTML-elementet definerer innholdet til selve HTML dokumentet. Alle andre elementer må befinne seg inne i dette HTML elementet.</td>
-  <td>-</td>
-</tr>
-</tbody></table>
-<hr>
-
-
-<h4>Metadata</h4>
-<table class="table table-striped">
-<tbody><tr>
-  <th style="width: 75px;">Element</th>
-  <th>Bruksområde</th>
-  <th style="width: 250px;">Eksempel</th>
-</tr>
-<tr>
-  <td>&lt;head&gt;</td>
-  <td>Head elementet definerer dokumentets metadata. Dette er data som ikke vises på nettsiden, men som beskriver selve nettsiden til nettleseren. Sidens tittel, linker til CSS dokumenter og fonter, samt annen meta-data finnes inne i head-elementet.</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td>&lt;title&gt;</td>
-  <td>Title-elementet definerer nettsidens tittel, som er synlig i nettleserens tittel-linje</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td>&lt;meta&gt;</td>
-  <td>Meta-elementet definerer informasjon om nettsiden. Denne informasjonen er ikke synlig på selve nettsiden, men benyttes av bl.a. søkemotorer og andre tjenester som skal lese informasjon om siden (f.eks. Facebook, o.l.)</td>
-  <td>-</td>
-</tr>
-</tbody></table>
-
-
-<hr>
-<h4>De aller vanligste HTML elementene</h4>
-
-<p>Her er en oversikt over de aller vanlisgte elementene. I begynnelsen klarer vi oss godt med disse.</p>
-<p>Det finnes mange flere og du kan finne en mye større liste <a href="html_elementer.html">her</a></p>
-
-<table class="table table-striped">
-<tbody><tr>
-  <th style="width: 75px;">Element</th>
-  <th>Bruksområde</th>
-  <th style="width: 250px;">Eksempel</th>
-</tr>
-<tr>
-  <td>&lt;body&gt;</td>
-  <td>Body-elementet avgrenser innholdet som er synlig på nettsiden. Alle HTML elementer som skal være synige må befinne seg inne i body-elementet</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td>&lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt; &lt;h7&gt;</td>
-  <td>HTML definerer 7 overskriftselementer "h1" til "h7" som fungerer som overskrifter. H1 er den største overskriften, mens H7 er den minste.</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td>&lt;p&gt;</td>
-  <td>Paragraf elementet benyttes for å pakke inn tekst i et paragraf. Ved å benytte paragraf elementet slipper du å legge til manuelle linjeskift i HTML koden din, samtidig som du får mulighet til å bestemme utseendet og avstand mellom paragrafene dine ved hjelp av CSS</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td>&lt;a&gt;</td>
-  <td>A-elementet representerer en hyperlink og benyttes til å koble to dokumenter sammen.
-  en link ser slik ut:<pre>&lt;a href="http://bt.no"&gt;BT&lt;/a&gt;</pre></td>
-  <td>-</td>
-</tr>
-<tr>
-  <td>&lt;span&gt;</td>
-  <td>Span-elementet definerer tekst som skal gis et spesifikt utseendet. Utseendet defineres i span-elementets class eller style attributter</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td>&lt;br&gt;</td>
-  <td>Br-elementet definerer et linjeskift i dokumentet</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td>&lt;img&gt;</td>
-  <td>Img-elementet represeterer et bilde som er angitt via src attributtet.
-  For å vise et bilde på siden bruker man noe sånt som dette:
-  <pre>&lt;img src="bilde.jpg"&gt;</pre>
-  </td><td>-</td>
-</tr>
-<tr>
-
-<tr>
-  <td>&lt;hr&gt;</td>
-  <td>Hr-elementet spesifiserer en horisontal skille-linje som kan benyttes for å skille innholdet på siden
-  </td><td>-</td>
-</tr>
-<tr>
-  <td>&lt;ol&gt;</td>
-  <td>Ol-elementet definerer en nummerert liste</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td>&lt;ul&gt;</td>
-  <td>Ol-elementet definerer en unummerert liste</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td>&lt;li&gt;</td>
-  <td>Li-elementet definerer et liste element inne i enten et ol eller ul element
-  </td><td>-</td>
-</tr>
-</tbody></table>
-
-
-<h2>Lag din egen side</h2>
-<p>Nå når vi har gått gjennom hvilke HTML elementer vi har tilgang til å benytte oss av, er det på tide å fortsette med å bygge videre på nettsiden vår. </p>
-
-<h4>Overskrifter</h4>
-<p>Legg til noen overskrifter på siden din ved å bruke h elementer. Gjerne en stor h1 overskrift øverst, og noen mindre overskrifter med f.eks h2 eller h3.</p>
-
-<h4>Avsnitt</h4>
-<p>Lag noen avsnitt for hver overskrift ved å bruke p elementer. Skriv litt om deg selv eller ting du er interessert i.</p>
-
-<h4>Bilder</h4>
-<p>Legg til noen bilder ved å bruke img elementet. Du kan bruke bilder du har på datamaskinen din, aller laste ned noen. Lag en mappe i prosjektet ditt som heter "bilder". Kopier bildene inn i mappen. Da kan du bruke &lt;img src="bilder/bildenavn.jpg"&gt; for å vise bildet på siden din.
-<br>
-Du kan også linke til bilder som ligger på nettet. Da bruker du hele URL'en til bildet i img elementet. Det er vanligvis lurest å laste ned bildene til sin egen maskin. Det kan være at bilder på nettet forsvinner eller endrer seg.</p>
-
-<h4>Linker</h4>
-<p>Prøv å lage noen linker til andre sider på nettet ved å bruke a elementet. Det skal se slik ut: &lt;a href="http://bt.no">Her er en link til BT&lt;/a&gt;</p>
-
-<h4>Lag flere sider</h4>
-<p>Lag noen flere html-filer og lagre dem i samme katalog. Gi dem foskjellige navn. Lag linker til disse sidene ved å bruke a elementet med href. Når du linker til egne sider skal ikk http:// være med, da holder det med filnavnet. Se om du får det til.
-
-
-
-<h2>Stiling med CSS</h2>
-<p>Foreløpig ser nettsiden vår ganske kjedelig ut, bare svart text på hvit bakgrunn. Det er fordi HTML bare definerer hva siden skal inneholde, og ikke hvordan det skal se ut. For å bestemme hvordan siden skal se ut bruker vi et annet språk som kalles CSS. (Det er en forkortelse for Cascading Style Sheets.) CSS brukes altså til å <i>stile</i> en webside, altså styre hvordan den skal se ut.</p>
-
-<h4>Inline CSS</h4>
-<p>Den enkleste måten å bruke CSS på er å bruke style-attributten direkte på html-elementene. Dette kalles <i>inline CSS</i> Det lett å lære og enkelt når vi ikke har så mye CSS men kan bli veldig uoversiktlig når det begynner å bli mye. Senere skal vi lære å plassere CSS i en egen fil, men vi begynner med den enkle måten først.</p>
-
-<p>CSS består av attributter og verdier. F.eks kan vi bruke attributten "color" til å sette fargen på noe og 'text-align' til å midtstille 
-tekst slik som dette: </p>
-
-<p>
-  <pre>&lt;h1 style="color: red; text-align: center;"&gt;Velkommen til Kodeklubben!&lt;/h1&gt;</pre>
-</p>
-<p>Dette vil vises som</p>
-<div class="example">
-  <h1 style="color:red; text-align:center;">Velkommen til Kodeklubben!</h1>
-</div>
-
-<p>Vi setter altså CSS på et element ved å bruke 'style' attributten og så liste opp CSS attributter inni den. Vi kan ha så mangge CSS attributter vi vil på hvert element, men hvis det blir veldig mange er det lurere å flytte dem til en egen fil. Det skal vi lære litt senere.
-Hver CSS attributt er bygget opp slik:
-</p>
-
-<pre> attributt: verdi;</pre>
-
-<p> CSS <i>arves</i> av alle elementene som er <i>inni</i> det elementet som CSS'en er satt på. Samtidig <i>overstyres</i> CSS attributter hvis de også er satt på et element som er inni.</p>
-
-<pre >
-  &lt;div style="text-align: center; color: red"&gt;
-    &lt;p&gt;
-      Første avsnitt
-    &lt;/p&gt;
-    &lt;p style="color: blue"&gt;
-      &lt;span&gt;Andre avsnitt&lt;/span&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;
-
-</pre>
-
-<p>Vises som:</p>
-<div class="example">
-  <div style="text-align: center; color: red">
-    <p>
-      Første avsnitt
-    </p>
-    <p style="color: blue">
-      <span>Andre avsnitt</span>
-    </p>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="description" content="Kodeklubben Nordnes : ">
+  <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+  <title>Kodeklubben Nordnes</title>
+</head>
+<body>
+  <!-- HEADER -->
+  <div id="header_wrap" class="outer">
+    <header class="inner">
+      <a id="forkme_banner" href="https://github.com/kodeklubben-nordnes">View on GitHub</a>
+      <h1 id="project_title">Kodeklubben Nordnes</h1>
+      <h2 id="project_tagline"></h2>
+    </header>
   </div>
-</div>
+  <!-- MAIN CONTENT -->
+  <div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
 
-<p> Begge avsnittene inni div-elementet arver stilingen fra div'en. Derfor blir begge midtstilt. Det første avsnittet arver også den røde teksten,
-men på det andre avsnittet har vi sagt at teksten skal være blå i stedet. Så selv om vi arvet rød tekst overstyrer vi den til å bli blå i stedet.
-Hvis vi hadde hatt flere elementer inni det andre avsnittet, ville de arvet den blå fargen i stedet for den røde.</p>
+      <div class="chapters">
+        <h3>Kapitler</h3>
+        <a href="#"></a>
+        <a href="css.html">Stiling med CSS</a>
+        <a href="#"></a>
+        <a href="#"></a>
+      </div>
 
-<p>Fordi CSS attributtene overstyrer hverandre, kan ofte være vanskelig å finne ut hvorfor det blir som de blir når vi har mye CSS. Da er det veldig nyttig å bruke utviklerverktøyet som finnes i de fleste nettlesere (f.eks Chrome Developer Tools) til å undersøke hvilken CSS som er gjeldende for et element og hvor denne kommer fra.</p>
-
-<p>Utviklerverktøyet er også veldig nyttig til å prøve forskjellige attributter og verdier og se hvordan ting vil se ut. Prøv det!</p>
-
-
-
-<h4>De vanligste CSS attributtene</h4>
-
-<p>Det finnes veldig mange CSS attributter og det finnes folk som jobber bare med å skrive CSS. Vi kan ikke gå gjennom alle her, men vi skal lære noen av de vanligste. For å lære flere CSS attributter og mer om CSS kan man finne masse informasjon på internett. F.eks på 
-<a href="http://www.w3schools.com/cssref/default.asp">w3schools</a> eller 
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">Mozilla Developer Network</a>
-</p> 
-<p>Her er noen av den vanligste CSS attributtene:</p>
-
-<table class="table table-striped">
-<tbody><tr>
-  <th style="width: 75px;">Attributt</th>
-  <th>Bruksområde</th>
-  <th style="width: 250px;">Eksempel</th>
-</tr>
-<tr>
-  <td>color</td>
-  <td>Setter forgrunnsfargen. Noen farger kan angis med <a href="http://www.w3schools.com/colors/colors_names.asp">navn</a>. For andre farger må vi bruke <a href="http://www.w3schools.com/cssref/css_colors.asp">fargekoder</a></td>
-  <td>color: red;<br>color: #ff0000;</td>
-</tr>
-<tr>
-  <td>background-color</td>
-  <td>Setter bakgrunnsfargen. Hvis vi setter denne på &lt;body&gt; settes fargen på hele siden.</td>
-  <td>background-color: red;<br>bacjground-color: #ff0000;</td>
-</tr>
-<tr>
-  <td>background-image</td>
-  <td>Brukes til å sette et bilde som bakgrunn på &lt;body&gt; elementet. Bildet gjentas mange ganger til det dekker hele bakgrunnen. 
-      Det finnes flere attributter som styrer bakgrunnsbildet f.eks background-position, background-size og background-repeat. Slå opp disse på <a href="http://www.w3schools.com/cssref/default.asp">w3schools</a> eller 
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">MDN</a> for å finne ut mer om dem.
-  </td>
-  <td>background-image: url("bakgrunn.jpg");</td>
-</tr>
-<tr>
-  <td>font-size</td>
-  <td>Setter størrelsen på teksten. Settes som regel i piksler (px) eller punkter (pt)</td>
-  <td>font-size: 12px;<br>font-size: 22pt;</td>
-</tr>
-<tr>
-  <td>text-align</td>
-  <td>Justerer teksten til høyre, venstre eller midtstilt.</td>
-  <td>text-align: left;<br>
-      text-align: right;<br>
-      text-align: center;<br>
-      text-align: justify;</td>
-</tr>
-<tr>
-  <td>border</td>
-  <td>Brukes til å tegne en ramme rundt et element. Brukes ofte på et &lt;div&gt; element. De finnes mange andre attributter som 
-    begynner med border- som lar oss styre i detalj hvordan rammen skal se ut. Disse kan du finne selv på 
-    <a href="http://www.w3schools.com/cssref/default.asp">w3schools</a> eller 
-    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">MDN</a>. Border-attributten tar tre parametre: 
-    <a href="http://www.w3schools.com/cssref/pr_border-width.asp">border-width</a>, 
-    <a href="http://www.w3schools.com/cssref/pr_border-style.asp">border-style</a> og 
-    <a href="http://www.w3schools.com/cssref/pr_border-color.asp">border-color</a>. 
-    Hver av disse er egne attributter som kan brukes hver for seg i stedet for border.
-    </td>
-  <td>border: 1px solid blue;<br>
-      border: 2px dotted red;<br>
-      border: medium dashed green; </td>
-</tr>
-<tr>
-  <td>padding</td>
-  <td>Padding betyr polstring og brukes til å lage litt "luft" rundt <i>innholdet</i> i et element. Hvis elementet har en border, 
-  vil paddingen ligge på <i>innsiden</i> av den. Vi kan ha padding 
-      på alle fire sidene eller bare på noen av dem. Padding-attributten tar 1 til 4 parametre. Hvis vi bruker bare 1 
-      blir det like mye padding på alle fire sidene. Hvis vi bruker to er den første toppen og bunnen, og den andre er høyre og venstre.</td>
-  <td>padding: 10px;<br>
-      padding: 10px 20px;<br>
-      padding: 10px 20px 30px 40px;</td>
-</tr>
-<tr>
-  <td>margin</td>
-  <td>Margin ligner på padding, men brukes til å lae "luft" mellom dette elementet og <i>andre elementer</i>. Hvis elementet har border vil marginen ligge på <i>utsiden</i> av den. Vi kan bruke 1 til 4 parametre som fungerer på samme måten som for padding.</td>
-  <td>margin: 10px;<br>
-      margin: 10px 20px;<br>
-      margin: 10px 20px 30px 40px;</td>
-</tr>
-<tr>
-  <td>height og width</td>
-  <td>Setter høyden og bredden på elementet. De kan brukes hver for seg. Hvis bare den ene er satt vil den andre kanskje beregnes automatisk.
-      Hvis vi f.eks setter bare height på et bilde, vil width justeres automatisk slik at hele bildet blir større.</td>
-  <td>height: 20px<br>
-      width: 100%<br>
-      height: auto</td>
-</tr>
-<tr>
-  <td>float</td>
-  <td>Brukes til å få et element til å "flyte". At det flyter vil si at det legger seg til høyre eller venstre, og at tekst og andre elementer "flyter" rundt elementet. Det brukes til å f.eks. plassere et bilde i en artikkel og så få teksten til å plassere seg fint rundt bildet.
-  Float brukes også til layout, f.eks. plassere en navigasjonsmeny helt til venstre og så selve sideinnholdet ved siden av. I så fall bruker vi float: left; på menyen.</td>
-  <td>
-    <pre>
-    &lt;div style="float: left;"&gt;
-      Menyen her
-    &lt;/div&gt;
-
-    &lt;div&gt;
-      Sideinnhold
-    &lt;/div&gt;
-    </pre>
-    <br>
-    float: left;<br>
-    float: right;<br>
-    float: none;<br>
-    </td>
-</tr>
-
-</tbody>
-</table>
-
-<h2>Prøv deg frem med CSS</h2>
-<p>Nå når vi har lært noen av de vanligste CSS attributtene kan du prøve å bruke dem på siden din.</p>
-<ul>
-  <li>Prøv å sette farger på forskjellige ting.</li>
-  <li>Prøv å sette en bakgrunnsfarge på selve siden.</li>
-  <li>Prøv å sette et bakgrunnsbilde, og se hva som skjer.</li>
-  <li>Prøv å ekperimentere med de andre background-attributtene som background-position, background-size og background-repeat. Se om du får et bilde til å dekke hele siden.</li>
-  <li>Prøv å bruke border på f.eks. en &lt;div&gt;. Hva skjer? Prøv å endre størrelsen på div-en med height og width.</li>
-  <li>Prøv deg frem med margin og padding. Husk at markin lager mellomrom på utsiden av elementet, mens padding lager mellomrom inni elementet.
-  Prøv å plassere teksten din på en fin måte ved å bruke padding og margins. Legg gjerne til ekstra &lt;div&gt; elementer for å få det sånn som du vil.</li>
-  <li>Prøv å lage en liten meny til venstre på siden ved å bruke float. Lag en &lt;div&gt; som inneholder menyen og sett "float: left;" på den. Plasser selve innholdet i en ny &lt;div&gt; like etter den første, og se hva som skjer. </li>
-</ul>
-
-<p></p>
-
-<p>Det neste vi skal lære er <a href="tabeller-lister.html">tabeller og lister</a></p>
-
-
-
-
-</div>
+      <h2>Intro til HTML</h2>
+      <p>
+        Stort sett alle nettsider du besøker i dag er skrevet ved hjelp av teknologiene HTML, CSS og JavaScript. HTML, som står for, HyperText Markup Language, definerer en nettsides struktur og generell oppbygning. CSS, som står for Cascading Style Sheets, bestemmer en nettsides utseendet, mens JavaScript definerer ytterligere funksjonalitet til nettsiden.
+      </p>
+      <p>
+        I dette kurset skal vi gå gjennom hva HTML er, hva det er bygget opp av, samt hvordan du kan benyttet HTML til å skrive enkle nettsider. Helt til slutt skal vi diskutere forskjellige metoder du kan benytte for å enkelt publisere nettsidene dine ut på internett.
+      </p>
+      <p>
+        Dette kapittelet tar for seg HTML strukturen, samt de mest grunnleggende HTML elementene du kan benytte deg av for å strukturere en nettside.
+      </p>
+      <p>
+        Ettersom det er vanskelig å lage nettsider som kun benytter seg av HTML, vil vi benytte CSS for å bestemme utseendet til nettsidene vi lager. Men det før vi kan sette i gang, må vi sørge for at vi har installert det vi trenger.
+      </p>
+      <h3>Før du starter</h3>
+      <p>Før du starter trenger du to ting:</p>
+      <ul>
+        <li>En nettleser</li>
+        <li>En tekst editor</li>
+      </ul>
+      <p>
+        Alle har nok en nettleser, men i dette kurset skal vi bruke Google Chrome. Hvis du ikke har Chrome på PC'en din må du
+        <a href="https://www.google.com/chrome/browser/desktop/index.html">laste den ned og installere den</a>
+        . Etter hvert kan du bruke andre nettlesere, men det er best at alle begynner med den samme.
+      </p>
+      <p>
+        Nettsider skrives som ren tekst og derfor må man ha en tekst editor. Alle datamaskiner har en teksteditor, f.eks. Notepad på Windows. Denne 
+        <i>kan</i>
+        brukes, men den er ganske dårlig. Man kan IKKE bruke f.eks. Word eller andre programmer om lar deg formattere teksten (dvs. bestemme hvordan den skal se ut). Det må være ren tekst.
+      </p>
+      <p>
+        Vi skal bruke en teksteditor som heter Atom. Gå til
+        <a href="https://atom.io/">https://atom.io/</a>
+        og installer denne. Hvis du bruker en skole-PC kan du kanskje ikke installere Atom, da har vi en egen versjon som ikke krever installasjon.
+      </p>
+      <h3>Lage et prosjekt</h3>
+      <p>
+        Når du har disse verktøyene klare kan du begynne. Det første vi må gjøre er å finne ut hvor vi vil lagre filene som vi skal lage.
+      </p>
+      <p>
+        Jeg pleier å samle alle kodeprosjektene mine i en mappe "Prosjekter" i hjem-mappen på maskinen min. Lag en mappe som heter Prosjekter f.eks. under Mine Dokumenter eller et annet passende sted. Det viktigste er at du husker hvor den er og at du klarer å finne den igjen. Lag en ny mappe som heter "html-intro" inne i Prosjekter. Det er der vi skal lage filene for denne oppgaven. På den måten blir det lett å skille forskjellige prosjekter fra hverandre. Deretter kan du åpne Atom.
+      </p>
+      <p>
+        Velg File i menyen og deretter Open Folder. Åpne mappen du laget tidligere (html-intro).
+      </p>
+      <p>
+        Når vi skal lage nettsider er de utviklet i et tekst-basert språk som heter HTML, mens utseendet på nettsiden er definert i et annet tekst-basert språk som heter CSS (Cascading Style Sheets). Dersom det er behov for ytterligere funksjonalitet utvikles dette i det tekst-baserte språket JavaScript. I disse kapitlene skal vi fokusere mest på HTML, men vi kommer også til å introdusere og benytte oss av noe CSS for å få nettsiden til å se ut slik som vi ønsker den.
+      </p>
+      <p>
+        Vi skal opprette en ny tekstfil inne i "html-intro" mappen som heter "index.html". Du kan enten opprette denne direkte i Explorer for Windows eller Finder for Mac, eller du kan benytte deg av teksteditoren. I såfall velger du File og så New File, og så velger du File igjen og deretter Save for å gi den navn. Pass på at filen blir lagret i mappen html-intro
+      </p>
+      <p>
+        Når du har laget filen kan du kopiere html-koden som du ser under og lime den inn i filen. Dette er det aller enkleste en html-fil kan bestå av.
+      </p>
+      <pre>    
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head lang="en"&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&lt;&gt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+      <p>
+        Her kan du allerede både se strukturen på både HTML dokumentet, samtidig som du kan se hvordan HTML er strukturert. HTML består av et sett med elementer (tags) som beskriver innholdet i HTML dokumentet. Alle HTML elementer starter og slutter med en vinkel-parantes.
+      </p>
+      <p>
+        Selve dokumentet starter med å deklarere dokument typen til HTML, og benytter seg av XML-standard elementet DOCTYPE. De aller fleste nettlesere vil klare å lese HTML dokumentet ditt helt fint selv uten denne dokument deklarasjonen, men det er en god ide å ha den med likevel.
+      </p>
+      <p>
+        Det neste elementet (&lt;html&gt;) definerer området i dokumentet hvor HTML koden skal plasseres. Dersom du ser helt nederst på linje 10, kan du se at vi avslutter HTML-elementet ved å bruke &lt;/html&gt; Dette er et viktig prinsipp i HTML, og med et fåtalls unntak skal samtlige HTML elementer lukkes på denne måten.
+      </p>
+      <p>
+        Deretter har vi definert 2 hovedområder i dokumentet vårt, &lt;head&gt; og &lt;body&gt; elementene. I Head-elementet definerer vi sidens metadata. Dette er informasjon om siden som ikke er synlig direkte i nettsiden, men som forteller nettleseren og andre mennesker og maskiner som leser kildekoden til nettsiden viktig informasjon angående nettsiden.
+      </p>
+      <p>
+        Head-elementet er bl.a. ansvarlig for å definere nettsidens utseendet enten ved å inkludere et style-element eller linke til eksterne CSS dokumenter. I tillegg inneholder Head-elementet et title-element som definerer hva som skal stå i tittel-linjen i nettleseren.
+      </p>
+      <p>
+        Til slutt i dokumentet har vi Body-elementet som foreløpig er tomt. Body-elementet definerer i bunn og grunn alt som skal vises på selve nettsiden.
+      </p>
+      <p>
+        Det siste vi skal gjøre før vi går videre med å lære oss de viktigste HTML elementene, er å plassere litt innhold på nettsiden. Først skal vi plassere teksten "Kodeklubben Nordnes" inne i title-elementet. Deretter skal vi skrive en overskrift som sier "Velkommen til Kodeklubben Nordnes" på nettsiden.
+      </p>
+      <pre>    
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head lang="en"&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Kodeklubben Nordnes&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+   &lt;h1&gt;Velkommen til Kodeklubben Nordnes!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+      <p>
+        For å teste hvordan din nye nettside ser ut i nettleseren kan vi trekke html-intro/index.html filen inn i nettleseren din for å se hvordan den ser ut.
+      </p>
+      <p>
+        Nå når du har sett resultatet av vår første, enkle nettside er det på tide å se litt nærmere på hvilke HTML elementer vi har tilgjengelig.
+      </p>
+      <h2>De viktigste HTML elementene</h2>
+      <!-- <div class="pageContent">
+      -->
+      <p>
+        Det finnes en rekke med HTML elementer som er gyldige i HTML5, som er den nyeste standarden innenfor HTML. Dette delkapittlet er ment til å gi en rask oversikt over hvilke elementer som er tilgjengelig, samtidig som den viser hvordan de forksjellige elementene ser ut og benyttes.
+      </p>
+      <p>
+        Vi kommer ikke til å benytte alle HTML elementene her, men det er likevel greit å ha en oversikt over hvilke elementer som er tilgjengelige og hvordan de oppfører seg.
+      </p>
+      <h3>Vanlige HTML elementer</h3>
+      <h4>Topp-element</h4>
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <th style="width: 75px;">Element</th>
+            <th>Bruksområde</th>
+            <th style="width: 250px;">Eksempel</th>
+          </tr>
+          <tr>
+            <td>&lt;html&gt;</td>
+            <td>
+              HTML-elementet definerer innholdet til selve HTML dokumentet. Alle andre elementer må befinne seg inne i dette HTML elementet.
+            </td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+      <h4>Metadata</h4>
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <th style="width: 75px;">Element</th>
+            <th>Bruksområde</th>
+            <th style="width: 250px;">Eksempel</th>
+          </tr>
+          <tr>
+            <td>&lt;head&gt;</td>
+            <td>
+              Head elementet definerer dokumentets metadata. Dette er data som ikke vises på nettsiden, men som beskriver selve nettsiden til nettleseren. Sidens tittel, linker til CSS dokumenter og fonter, samt annen meta-data finnes inne i head-elementet.
+            </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>&lt;title&gt;</td>
+            <td>
+              Title-elementet definerer nettsidens tittel, som er synlig i nettleserens tittel-linje
+            </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>&lt;meta&gt;</td>
+            <td>
+              Meta-elementet definerer informasjon om nettsiden. Denne informasjonen er ikke synlig på selve nettsiden, men benyttes av bl.a. søkemotorer og andre tjenester som skal lese informasjon om siden (f.eks. Facebook, o.l.)
+            </td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+      <h4>De aller vanligste HTML elementene</h4>
+      <p>
+        Her er en oversikt over de aller vanlisgte elementene. I begynnelsen klarer vi oss godt med disse.
+      </p>
+      <p>
+        Det finnes mange flere og du kan finne en mye større liste
+        <a href="html_elementer.html">her</a>
+      </p>
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <th style="width: 75px;">Element</th>
+            <th>Bruksområde</th>
+            <th style="width: 250px;">Eksempel</th>
+          </tr>
+          <tr>
+            <td>&lt;body&gt;</td>
+            <td>
+              Body-elementet avgrenser innholdet som er synlig på nettsiden. Alle HTML elementer som skal være synige må befinne seg inne i body-elementet
+            </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>
+              &lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt; &lt;h7&gt;
+            </td>
+            <td>
+              HTML definerer 7 overskriftselementer "h1" til "h7" som fungerer som overskrifter. H1 er den største overskriften, mens H7 er den minste.
+            </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>&lt;p&gt;</td>
+            <td>
+              Paragraf elementet benyttes for å pakke inn tekst i et paragraf. Ved å benytte paragraf elementet slipper du å legge til manuelle linjeskift i HTML koden din, samtidig som du får mulighet til å bestemme utseendet og avstand mellom paragrafene dine ved hjelp av CSS
+            </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>&lt;a&gt;</td>
+            <td>
+              A-elementet representerer en hyperlink og benyttes til å koble to dokumenter sammen.
+        en link ser slik ut:
+              <pre>&lt;a href="http://bt.no"&gt;BT&lt;/a&gt;</pre>
+            </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>&lt;span&gt;</td>
+            <td>
+              Span-elementet definerer tekst som skal gis et spesifikt utseendet. Utseendet defineres i span-elementets class eller style attributter
+            </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>&lt;br&gt;</td>
+            <td>Br-elementet definerer et linjeskift i dokumentet</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>&lt;img&gt;</td>
+            <td>
+              Img-elementet represeterer et bilde som er angitt via src attributtet.
+          For å vise et bilde på siden bruker man noe sånt som dette:
+              <pre>&lt;img src="bilde.jpg"&gt;</pre>
+            </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <!-- <tr>
+            -->
+            <td>&lt;hr&gt;</td>
+            <td>
+              Hr-elementet spesifiserer en horisontal skille-linje som kan benyttes for å skille innholdet på siden
+            </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>&lt;ol&gt;</td>
+            <td>Ol-elementet definerer en nummerert liste</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>&lt;ul&gt;</td>
+            <td>Ol-elementet definerer en unummerert liste</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>&lt;li&gt;</td>
+            <td>
+              Li-elementet definerer et liste element inne i enten et ol eller ul element
+            </td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Lag din egen side</h2>
+      <p>
+        Nå når vi har gått gjennom hvilke HTML elementer vi har tilgang til å benytte oss av, er det på tide å fortsette med å bygge videre på nettsiden vår.
+      </p>
+      <h4>Overskrifter</h4>
+      <p>
+        Legg til noen overskrifter på siden din ved å bruke h elementer. Gjerne en stor h1 overskrift øverst, og noen mindre overskrifter med f.eks h2 eller h3.
+      </p>
+      <h4>Avsnitt</h4>
+      <p>
+        Lag noen avsnitt for hver overskrift ved å bruke p elementer. Skriv litt om deg selv eller ting du er interessert i.
+      </p>
+      <h4>Bilder</h4>
+      <p>
+        Legg til noen bilder ved å bruke img elementet. Du kan bruke bilder du har på datamaskinen din, aller laste ned noen. Lag en mappe i prosjektet ditt som heter "bilder". Kopier bildene inn i mappen. Da kan du bruke &lt;img src="bilder/bildenavn.jpg"&gt; for å vise bildet på siden din.
+        <br>
+        Du kan også linke til bilder som ligger på nettet. Da bruker du hele URL'en til bildet i img elementet. Det er vanligvis lurest å laste ned bildene til sin egen maskin. Det kan være at bilder på nettet forsvinner eller endrer seg.
+      </p>
+      <h4>Linker</h4>
+      <p>
+        Prøv å lage noen linker til andre sider på nettet ved å bruke a elementet. Det skal se slik ut: &lt;a href="http://bt.no">Her er en link til BT&lt;/a&gt;
+      </p>
+      <h4>Lag flere sider</h4>
+      <p>
+        Lag noen flere html-filer og lagre dem i samme katalog. Gi dem foskjellige navn. Lag linker til disse sidene ved å bruke a elementet med href. Når du linker til egne sider skal ikk http:// være med, da holder det med filnavnet. Se om du får det til.
+        <p>
+          I neste kapittel skal lære hvordan vi kan bruke CSS til å
+          <a href="css.html">endre utseende på siden</a>
+        </p>
       </section>
     </div>
 
-    
-
-  </body>
-</html>
+</body>
+  </html>

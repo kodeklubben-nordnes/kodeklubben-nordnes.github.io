@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Kodeklubben Nordnes : ">
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
+    <title>Kodeklubben Nordnes</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+      <header class="inner">
+        <a id="forkme_banner" href="https://github.com/kodeklubben-nordnes">View on GitHub</a>
+        <h1 id="project_title">Kodeklubben Nordnes</h1>
+        <h2 id="project_tagline"></h2>
+      </header>
+    </div>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>Mer CSS</h2>
+        
+        <p>Hittil har vi skrevet CSS i style-attributten på HTML elementene. Dette går fint når vi ikke har så mye CSS og ikke skal gjøre så store endringer. Det er en enkel måte å komme igang med CSS, men det er ikke måten det vanligvis gjøres på. CSS kan også skrives for seg selv og ikke blandet sammen med HTML-koden. Da kan CSS-koden plasseres enten i en egen fil, eller i et &lt;style&gt; element i &lt;head&gt;. Måten vi skriver CSS på er den samme i begge tilfellene. Vi kan begynne med å plassere koden i &lt;head&gt; siden det er enklere å holde oversikten når alt er på samme sted. Når det begynner å bli mye kan vi enkelt flytte CSS-koden til en egen fil. CSS-filer gjør det også enkelt å bruke stiling som andre har laget </p>
+
+        <h4>CSS-blokker</h4>
+        <p>Vanlig CSS (altså CSS som ikke er i en style-attributt) ser slik ut:</p>
+        <pre >
+  selektor {
+    css-attributt: verdi;
+    css-attributt: verdi;
+  }
+        </pre>
+        <p>Dette er et eksempel for å vise hvordan strukturen ser ut. Vi ser at vi begynner med noe vi kaller en <i>selektor</i>. Så har vi et par krøllparenteser og i mellom dem har vi helt vanlig CSS slik som vi er vant til. Så i stedet for å skrive CSS i en style-attributt på et HTML-element skriver vi det i mellom to krøllparenteser med en selektor foran. Dette kaller vi en CSS-blokk.
+        </p>
+
+        <h4>Selektoren</h4>
+        <p>Selektoren avgør hvilke elementer CSS-blokken skal gjelde for. Det finnes flere typer selektorer. Den enkleste er å bruke navnet på et HTML-element. Hvis vi f.eks. vil at alle h1-elementer skal være røde kan vi gjøre dette:</p>
+        <pre >
+  h1 {
+    color: red;
+  }
+        </pre>
+        <p>Dette vil gjøre at alle h1-elementer på hele siden vil bli røde. Dette får samme effekt som å gjøre dette:
+        </p>
+        <pre>
+  &lt;h1 style="color: red;"&gt;Overskrift 1&lt;/h1&gt;
+  &lt;h1 style="color: red;"&gt;Overskrift 2&lt;/h1&gt;
+        </pre>
+
+        <p>Vi skriver altså ikke CSS på hvert enkelt element slik vi har gjort før. I stedet deler vi CSS-koden inn i blokker og bruker selektoren til å bestemme hvilke elementer blokken gjelder for. Det gjør at vi ikke trenger å gjenta CSS-koden så ofte. Det holder å si en gang at alle overskrifter skal være røde, og så trenger vi ikke å tenke mer på det.</p>
+
+
+        <p>Det finnes flere typer selektorer. De vanligste er  </p>
+        <ul>
+          <li>Navnet på HTML-elementer</li>
+          <li>ID-en til et HTML-element.</li>
+          <li>CSS klasser</li>
+        </ul>
+
+        <p>Vi skal gå gjennom hver av dem og forklare hvordan de virker.</p>
+
+        <h4>Element-selektor</h4>
+        <p>Element-selektoren er den vi brukte i eksempelet over. Den er enkel og grei. Det er bare navnet på et html-element. Alle html-elementer kan brukes, og selektoren vil gjelde for alle elementer av den typen.</p>
+        <p>Eksempel:</p>
+        <pre >
+  h1 {
+    color: red;
+  }
+        </pre>
+
+
+        <h4>ID-selektor</h4>
+        <p>ID er en egen attributt som kan settes på alle HTML-elementer. ID-er må være unike på en side. ID settes slik:</p>
+
+        <pre>
+  &lt;h1 id="overskrift1"&gt;Overskrift 1&lt;/h1&gt;
+  &lt;h1 id="overskrift2"&gt;Overskrift 2&lt;/h1&gt;
+        </pre>
+        <p>Da kan ID-selektoren brukes ved at vi skriver navnet på ID-en med # foran, slik som dette:</p>
+        <pre >
+  #overskrift1 {
+    color: red;
+  }
+
+  #overskrift2 {
+    color: blue;
+  }
+        </pre>
+        <p>Da vil bare overskrift1 bli rød og bare overskrift2 bli blå. CSS-en gjalder altså bare for akkurat de elementene som har den ID-en.</p>
+
+
+        <h4>Klasse-selektor</h4>
+        <p>En CSS-klasse er også en egen HTML-attributt som kan settes på alle HTML-elementer. Men i motsetning til ID trenger ikke klasser å være unike og vi kan også ha flere klasser på hvert HTML-element. Klasser settes slik:</p>
+        <pre>
+  &lt;h1 class="red"&gt;Overskrift&lt;/h1&gt;
+  &lt;p class="blue"&gt;Litt blå tekst&lt;/p&gt;
+  &lt;p class="red"&gt;Litt rød tekst&lt;/p&gt;
+        </pre>
+
+        <p>Da kan klasse-selektoren brukes ved at vi skriver navnet på klassen med . (punktum) foran, slik som dette:</p>
+        <pre >
+  .red {
+    color: red;
+  }
+
+  .blue {
+    color: blue;
+  }
+        </pre>
+
+        <p>Navnet på klassene finner vi på selv. Det er lurt å lage navn som passer med det CSS-en gjør, og så ha en blokk for hver klasse. I dette tilfellet har vi en klasse som gjør ting røde, og en som gjør ting blå. Disse klassene kan nå brukes på mange forskjellige HTML-elementer for å gjøre dem røde eller blå.</p>
+
+
+        <h4>Avanserte CSS selektorer</h4>
+        <p>CSS-selektorer kan være veldig avanserte. Vi kan f.eks bruke flere selektorer samtidig for å velge bare elemeter som er inni et annet element, eller elementer som har flere klasser, eller elementer som er av en gitt type OG en gitt klasse. Dette skal vi løre mer om senere, men hvis du vil lære mer om dette nå med en gang finnes det en <a href="http://www.w3schools.com/cssref/css_selectors.asp">liste med alle variantene her</a>.</p>
+
+
+        <h4>CSS i &lt;head&gt;</h4>
+        <p>Vi kan skrive CSS direkte i HTML filen ved å plassere den i et &lt;style&gt; element inni &lt;head&gt;, slik som dette:</p>
+        <pre>
+  &lt;head&gt;
+    &lt;style&gt;
+
+      .red {
+        color: red;
+      }
+
+      .blue {
+        color: blue;
+      }
+
+    &lt;/style&gt;
+
+  &lt;/head&gt;
+  
+        </pre>
+
+        
+        <!-- </div> -->
+      </section>
+    </div>
+  </body>
+</html>
