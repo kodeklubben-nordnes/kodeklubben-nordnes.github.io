@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+}
+
+header {
+  Background: url(http://i1035.photobucket.com/albums/a435/CaptainMaggot/Furry/rainbow-bacon-they-went-too-far-demotivational-poster-1276628752.jpg) no-repeat;
+  background-size: cover;
+  height: 1000px;
+  color: red;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  font-family: "Roboto";
+  border: 5px solid black;
+  text-transform: uppercase;
+  display: block;
+  margin: 10px;
+  padding: 5px 10px;
+  color: blue;
+  text-decoration: none;
+}
+
+.main-item{
+  width: 400px;
+  
+}
+
+.main-item img
